@@ -1,5 +1,6 @@
 import urllib.request
 import json
+#import praw
 
 def run(url = 'https://www.reddit.com/r/dadjokes/.json'):
   response = urllib.request.urlopen(url)
@@ -15,3 +16,11 @@ def run(url = 'https://www.reddit.com/r/dadjokes/.json'):
   #children data selftext
 
 run()
+
+"""
+def run2():
+  r = praw.Reddit('searchandacrchive by ')
+
+  subreddit_comment = r.get_comments(subName, limit=1000)
+  subreddit_posts = r.get_submissions(subName, limit=1000)
+"""
