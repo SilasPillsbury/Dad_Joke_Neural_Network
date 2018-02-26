@@ -2,7 +2,7 @@ import urllib.request
 import json
 #import praw
 
-def run(url = 'https://www.reddit.com/r/dadjokes/.json'):
+def run(url = 'https://www.reddit.com/r/dadjokes/.json?limit='+str(10**300)):
   response = urllib.request.urlopen(url)
   jFile = response.read()
 
