@@ -7,12 +7,15 @@ def run(url = 'https://www.reddit.com/r/dadjokes/.json?limit='+str(10**300)):
   jFile = response.read()
 
   data = json.loads(jFile)['data']
+  library = []
   for child in data['children']:
     if 'title' in child['data'].keys():
       print(child['data']['title'])
     if 'selftext' in child['data'].keys():
       print(child['data']['selftext'])
       print(' ')
+      library.append(child['data']['title']+ ' ' +child['data']['selftext'])
+  return library
   #children data selftext
 
 run()
